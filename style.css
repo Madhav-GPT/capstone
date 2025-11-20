@@ -1,4 +1,3 @@
-/* --- RESET & BASIC SETUP --- */
 * {
     margin: 0;
     padding: 0;
@@ -6,30 +5,26 @@
 }
 
 :root {
-    /* Premium Color Palette */
-    --bg-color: #FAFAFA; /* Very Clean Off-White */
-    --text-main: #1A1A1A; /* Deep Black for sharp contrast */
-    --accent-gold: #C5A059; /* Muted Elegant Gold */
+    --bg-color: #FAFAFA;
+    --text-main: #1A1A1A;
+    --accent-gold: #C5A059;
     --accent-gold-hover: #B08D4B;
     --light-gray: #F0F0F0;
     --white: #ffffff;
-    /* Soft, layered shadows for depth */
     --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
     --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 body {
-    /* Premium System Fonts Stack */
     font-family: "Georgia", "Times New Roman", serif;
     background-color: var(--bg-color);
     color: var(--text-main);
-    line-height: 1.7; /* Increased line height for readability */
+    line-height: 1.7;
 }
 
-/* Sans-serif for UI elements (Buttons, Nav, Prices) */
 nav, button, input, select, .price, .category-title, .breadcrumb, .badge {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 0.5px; /* Slight spacing for premium feel */
+    letter-spacing: 0.5px;
 }
 
 a {
@@ -45,13 +40,12 @@ ul {
 img {
     max-width: 100%;
     display: block;
-    transition: transform 0.6s ease; /* Smoother image zoom */
+    transition: transform 0.6s ease;
 }
 
-/* --- NAVBAR (Floating & Glassmorphism) --- */
 header {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px); /* Frosted glass effect */
+    backdrop-filter: blur(10px); 
     border-bottom: 1px solid rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
@@ -92,7 +86,6 @@ header {
     position: relative;
 }
 
-/* Animated Underline for Nav Links */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -120,7 +113,6 @@ header {
     transform: translateY(-2px);
 }
 
-/* --- HERO SECTION (Glassmorphism) --- */
 .hero-container {
     position: relative;
     height: 75vh;
@@ -142,7 +134,6 @@ header {
     animation: slideAnimation 12s infinite;
 }
 
-/* Slide Images configuration */
 .slide:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1600&auto=format&fit=crop'); animation-delay: 0s; }
 .slide:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=1600&auto=format&fit=crop'); animation-delay: 4s; }
 .slide:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1600&auto=format&fit=crop'); animation-delay: 8s; }
@@ -160,7 +151,6 @@ header {
     z-index: 10;
     text-align: center;
     color: var(--text-main);
-    /* Glassmorphism Box */
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     padding: 4rem;
@@ -187,7 +177,6 @@ header {
     color: #555;
 }
 
-/* --- BUTTONS (Pill Shape & Gradients) --- */
 .btn-primary {
     display: inline-block;
     padding: 16px 40px;
@@ -195,7 +184,7 @@ header {
     color: var(--white);
     font-weight: 700;
     border: none;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px; 
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -229,7 +218,6 @@ header {
     transform: translateY(-2px);
 }
 
-/* --- LAYOUT HELPERS --- */
 .section-container {
     max-width: 1200px;
     margin: 6rem auto;
@@ -255,7 +243,6 @@ header {
     border-radius: 2px;
 }
 
-/* --- CATEGORY CARDS --- */
 .category-flex {
     display: flex;
     gap: 30px;
@@ -268,7 +255,7 @@ header {
     height: 250px;
     position: relative;
     overflow: hidden;
-    border-radius: 12px; /* Soft corners */
+    border-radius: 12px;
     box-shadow: var(--shadow-soft);
     cursor: pointer;
 }
@@ -304,7 +291,6 @@ header {
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-/* --- PRODUCT GRID & CARDS --- */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -386,9 +372,6 @@ header {
     font-weight: 400;
 }
 
-/* --- PRODUCT DETAILS PAGE STYLES --- */
-
-/* Breadcrumbs */
 .breadcrumb {
     margin-bottom: 2.5rem;
     color: #888;
@@ -397,7 +380,6 @@ header {
 .breadcrumb a:hover { color: var(--accent-gold); }
 .breadcrumb span { margin: 0 12px; color: #ddd; }
 
-/* Product Detail Layout */
 .product-detail-wrapper {
     display: flex;
     gap: 5rem;
@@ -405,7 +387,6 @@ header {
     align-items: flex-start;
 }
 
-/* Gallery */
 .product-gallery { flex: 1.2; }
 .main-image {
     width: 100%;
@@ -428,7 +409,6 @@ header {
 }
 .thumb:hover { opacity: 1; transform: scale(1.05); border-color: var(--accent-gold); }
 
-/* Product Info Column */
 .product-info-col { flex: 1; padding-top: 1rem; }
 
 .product-name {
@@ -464,7 +444,6 @@ header {
     line-height: 1.8;
 }
 
-/* Form Elements */
 .product-options {
     margin-bottom: 2.5rem;
     padding: 2rem;
@@ -484,7 +463,6 @@ header {
     color: #888;
 }
 
-/* Styled Inputs */
 select, input[type="number"] {
     padding: 12px 15px;
     border: 1px solid #ddd;
@@ -508,7 +486,6 @@ input[type="number"] { width: 100px; }
 .action-buttons { display: flex; gap: 1.5rem; margin-top: 2rem; }
 .action-buttons button { flex: 1; }
 
-/* Info Tabs */
 .info-tabs { margin-top: 3rem; }
 .info-item {
     border-bottom: 1px solid #eee;
@@ -519,7 +496,6 @@ input[type="number"] { width: 100px; }
 .info-item:hover { background: #fdfdfd; }
 .info-title { font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main); }
 
-/* --- FOOTER --- */
 footer {
     background-color: #111;
     color: #fff;
@@ -531,7 +507,6 @@ footer {
 .footer-content h2 { font-size: 2rem; margin-bottom: 1rem; }
 .footer-content p { opacity: 0.6; font-size: 0.95rem; letter-spacing: 0.5px; }
 
-/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .hero-content { padding: 2rem; width: 90%; }
